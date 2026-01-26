@@ -1,0 +1,94 @@
+<!-- Kevin Goates, January 26, 2026 -->
+<!-- DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
+<!DOCTYPE html>
+<!-- the html tag goes next -->
+<html>
+    <!-- the head section has info for the browser and search engine -->
+    <head>
+        <!-- tells the browser to decode characters using UTF-8 -->
+        <meta charset="UTF-8">
+
+        <!-- the title shows in the browser tab -->
+        <title>CSC102 Game Page</title>
+
+        <!-- add a link to our css file -->
+        <link rel="stylesheet" href="main.css">
+
+        <!-- link our external JavaScript file (no JavaScript inside HTML) -->
+        <!-- defer makes sure the HTML loads first before the JS runs -->
+        <script src="code.js" defer></script>
+    </head>
+
+    <!-- the body section holds the text and images that we want to show to the user -->
+    <body>
+        <!-- header contains the page title and nav links -->
+        <header>
+            <h1>Quarks Casino: Quantum Dice</h1>
+
+            <!-- create a nav section to hold the menu -->
+            <nav>
+                <h2>
+                    <!-- link back to the home page -->
+                    <a href="./index.html">Home</a>
+                    <br>
+
+                    <!-- link to the boards page -->
+                    <a href="./boards.html">Boards</a>
+                    <br>
+
+                    <!-- link to the game page -->
+                    <a href="./game.html">Game</a>
+                    <br>
+                </h2>
+            </nav>
+        </header>
+
+        <!-- instructions for the user -->
+        <p>
+            Enter your name and a secret casino code word.  
+            Then press the button to roll the Quantum Dice.  
+            (Try entering a palindrome like "racecar" or "taco cat")
+        </p>
+
+        <!-- this is a FORM (required for all user input) -->
+        <form id="casinoForm">
+            <!-- label for the player name input -->
+            <label for="playerName">Player Name:</label>
+
+            <!-- text input for the player name -->
+            <input type="text" id="playerName" name="playerName" placeholder="Example: Kevin">
+            <br><br>
+
+            <!-- label for the secret code input -->
+            <label for="secretCode">Secret Casino Code:</label>
+
+            <!-- text input for the secret code -->
+            <input type="text" id="secretCode" name="secretCode" placeholder="Example: racecar">
+            <br><br>
+
+            <!-- submit button (required button to play the game) -->
+            <button type="submit">Roll the Quantum Dice</button>
+        </form>
+
+        <!-- horizontal line to separate form from results -->
+        <hr>
+
+        <!-- output area for results (all output comes from JS using innerHTML) -->
+        <div id="outputArea">
+            <!-- default message before the user plays -->
+            <p>Your game results will appear here.</p>
+        </div>
+
+        <!-- footer contains contact/school info -->
+        <footer>
+            Kevin Goates
+            <br>
+            University of Advancing Technology
+            <br>
+            2625 W Baseiline Rd
+            <br>
+            Tempe, AZ 85283
+            <br>
+        </footer>
+    </body>
+</html>
